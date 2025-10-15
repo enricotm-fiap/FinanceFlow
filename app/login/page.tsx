@@ -23,11 +23,11 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 p-4">
-      <Card className="w-full max-w-md">
+    <div className="flex h-screen items-center justify-center bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-slate-900 dark:to-slate-800 p-4">
+      <Card className="w-full max-w-md shadow-xl">
         <CardHeader className="space-y-4 text-center">
-          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
-            <Wallet className="h-8 w-8 text-emerald-600" />
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900">
+            <Wallet className="h-8 w-8 text-emerald-600 dark:text-emerald-400" />
           </div>
           <div>
             <CardTitle className="text-2xl font-bold">Bem-vindo ao FinanceFlow</CardTitle>
