@@ -6,9 +6,9 @@ import Link from "next/link"
 
 export default function RelatoriosPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col h-full">
       <DashboardHeader />
-      <div className="flex-1 p-6 space-y-6">
+      <div className="flex-1 p-6 space-y-6 overflow-auto">
         <div className="flex items-center gap-2 mb-6">
           <Button variant="outline" size="icon" asChild>
             <Link href="/">

@@ -6,9 +6,9 @@ import Link from "next/link"
 
 export default function RecommendationsPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col h-full">
       <DashboardHeader />
-      <div className="flex-1 p-6 space-y-6">
+      <div className="flex-1 p-6 space-y-6 overflow-auto">
         <div className="flex items-center gap-2 mb-6">
           <Button variant="outline" size="icon" asChild>
             <Link href="/">
@@ -35,9 +35,9 @@ export default function RecommendationsPage() {
                 Este é um bom momento para solicitar crédito. Sua empresa demonstra estabilidade financeira e capacidade
                 de pagamento, o que pode resultar em melhores taxas e condições.
               </p>
-              <div className="bg-slate-50 p-3 rounded-md">
-                <h4 className="font-medium mb-2">Por que esta recomendação?</h4>
-                <ul className="text-sm space-y-1">
+              <div className="bg-slate-50 dark:bg-slate-800 p-3 rounded-md">
+                <h4 className="font-medium mb-2 text-foreground">Por que esta recomendação?</h4>
+                <ul className="text-sm space-y-1 text-foreground">
                   <li className="flex items-start gap-2">
                     <div className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
                     <span>Fluxo de caixa positivo nos últimos 6 meses</span>
@@ -81,9 +81,9 @@ export default function RecommendationsPage() {
                 Identificamos um aumento significativo nas despesas operacionais nos últimos 3 meses. Recomendamos uma
                 revisão das principais categorias de gastos para otimizar o fluxo de caixa.
               </p>
-              <div className="bg-slate-50 p-3 rounded-md">
-                <h4 className="font-medium mb-2">Por que esta recomendação?</h4>
-                <ul className="text-sm space-y-1">
+              <div className="bg-slate-50 dark:bg-slate-800 p-3 rounded-md">
+                <h4 className="font-medium mb-2 text-foreground">Por que esta recomendação?</h4>
+                <ul className="text-sm space-y-1 text-foreground">
                   <li className="flex items-start gap-2">
                     <div className="mt-1 h-1.5 w-1.5 rounded-full bg-amber-500" />
                     <span>Aumento de 18% nas despesas operacionais</span>
@@ -127,9 +127,9 @@ export default function RecommendationsPage() {
                 Sua empresa possui um excedente de caixa que poderia ser aplicado em investimentos de curto e médio
                 prazo, gerando rendimentos adicionais sem comprometer a liquidez.
               </p>
-              <div className="bg-slate-50 p-3 rounded-md">
-                <h4 className="font-medium mb-2">Por que esta recomendação?</h4>
-                <ul className="text-sm space-y-1">
+              <div className="bg-slate-50 dark:bg-slate-800 p-3 rounded-md">
+                <h4 className="font-medium mb-2 text-foreground">Por que esta recomendação?</h4>
+                <ul className="text-sm space-y-1 text-foreground">
                   <li className="flex items-start gap-2">
                     <div className="mt-1 h-1.5 w-1.5 rounded-full bg-purple-500" />
                     <span>Excedente médio de R$ 85.000 nos últimos 3 meses</span>
@@ -173,9 +173,9 @@ export default function RecommendationsPage() {
                 Identificamos um padrão sazonal que indica uma possível redução de receitas no próximo trimestre.
                 Recomendamos preparar-se financeiramente para este período.
               </p>
-              <div className="bg-slate-50 p-3 rounded-md">
-                <h4 className="font-medium mb-2">Por que esta recomendação?</h4>
-                <ul className="text-sm space-y-1">
+              <div className="bg-slate-50 dark:bg-slate-800 p-3 rounded-md">
+                <h4 className="font-medium mb-2 text-foreground">Por que esta recomendação?</h4>
+                <ul className="text-sm space-y-1 text-foreground">
                   <li className="flex items-start gap-2">
                     <div className="mt-1 h-1.5 w-1.5 rounded-full bg-rose-500" />
                     <span>Queda média de 22% nas receitas no mesmo período dos últimos 2 anos</span>

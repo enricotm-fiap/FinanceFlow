@@ -41,8 +41,8 @@ export function CompanyStatus() {
       </CardHeader>
       <CardContent>
         <div className="flex items-center justify-center mb-6">
-          <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-8 border-emerald-100">
-            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-emerald-600 text-white">
+          <div className="relative flex h-32 w-32 items-center justify-center rounded-full border-8 border-emerald-100 dark:border-emerald-900">
+            <div className="flex h-24 w-24 items-center justify-center rounded-full bg-emerald-600 dark:bg-emerald-700 text-white">
               <div className="flex flex-col items-center">
                 {getPhaseIcon(companyData.phase)}
                 <span className="text-sm font-medium">{companyData.phase}</span>
@@ -60,12 +60,12 @@ export function CompanyStatus() {
             </div>
             <Progress value={companyData.progress} className="h-2" />
           </div>
-          <div className="rounded-lg bg-slate-50 p-4">
-            <h4 className="mb-2 font-medium">Características da fase de {companyData.phase}:</h4>
-            <ul className="space-y-1 text-sm">
+          <div className="rounded-lg bg-slate-50 dark:bg-slate-800 p-4">
+            <h4 className="mb-2 font-medium text-foreground">Características da fase de {companyData.phase}:</h4>
+            <ul className="space-y-1 text-sm text-foreground">
               {companyData.characteristics.map((characteristic, index) => (
                 <li key={index} className="flex items-start gap-2">
-                  <div className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600" />
+                  <div className="mt-1 h-1.5 w-1.5 rounded-full bg-emerald-600 dark:bg-emerald-500" />
                   <span>{characteristic}</span>
                 </li>
               ))}

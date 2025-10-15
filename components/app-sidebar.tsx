@@ -1,6 +1,6 @@
 "use client"
 
-import { BarChart3, CreditCard, FileText, Home, LineChart, Settings, TrendingUp, Users, Wallet } from "lucide-react"
+import { BarChart3, FileText, Home, LineChart, Settings, TrendingUp, Users, Wallet } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
@@ -61,14 +61,6 @@ export function AppSidebar() {
               <Link href="/relatorios">
                 <BarChart3 className="h-4 w-4" />
                 <span>Relatórios</span>
-              </Link>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton asChild isActive={pathname === "/credito"}>
-              <Link href="/credito">
-                <CreditCard className="h-4 w-4" />
-                <span>Crédito</span>
               </Link>
             </SidebarMenuButton>
           </SidebarMenuItem>

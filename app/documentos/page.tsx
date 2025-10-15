@@ -8,9 +8,9 @@ import { documentsData } from "@/lib/document-data"
 
 export default function DocumentosPage() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col h-screen">
       <DashboardHeader />
-      <div className="flex-1 p-6 space-y-6">
+      <div className="flex-1 p-6 space-y-6 overflow-auto">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Button variant="outline" size="icon" asChild>
@@ -26,9 +26,9 @@ export default function DocumentosPage() {
           </Button>
         </div>
 
-        <Card className="bg-blue-50 border-blue-200">
+        <Card className="bg-blue-50 dark:bg-blue-950 border-blue-200 dark:border-blue-800">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 text-blue-700">
+            <CardTitle className="flex items-center gap-2 text-blue-700 dark:text-blue-300">
               <DollarSign className="h-5 w-5" />
               Impacto Financeiro dos Documentos
             </CardTitle>
@@ -39,22 +39,22 @@ export default function DocumentosPage() {
           <CardContent>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
               <div>
-                <span className="font-medium text-blue-700">Documentos Aprovados:</span>
+                <span className="font-medium text-blue-700 dark:text-blue-300">Documentos Aprovados:</span>
                 <span className="ml-2">{documentsData.filter((d) => d.status === "approved").length}</span>
               </div>
               <div>
-                <span className="font-medium text-blue-700">Em Análise:</span>
+                <span className="font-medium text-blue-700 dark:text-blue-300">Em Análise:</span>
                 <span className="ml-2">{documentsData.filter((d) => d.status === "pending").length}</span>
               </div>
               <div>
-                <span className="font-medium text-blue-700">Próximos ao Vencimento:</span>
+                <span className="font-medium text-blue-700 dark:text-blue-300">Próximos ao Vencimento:</span>
                 <span className="ml-2">{documentsData.filter((d) => d.status === "expiring").length}</span>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        <div className="grid grid-cols-1 gap-4">
+        <div className="grid grid-cols-1 gap-4 auto-rows-min pb-6">
           {documentsData.map((doc) => (
             <Card key={doc.id}>
               <CardHeader>
